@@ -1,10 +1,8 @@
 import json
-
+import os
 
 def hello(event, context):
-    body = {
-        "message": "Go Serverless v3.0! Your function executed successfully!",
-        "input": event,
-    }
+    print(os.environ("AWS_ACCESS_KEY_ID"))
+    print(os.environ("AWS_SECRET_ACCESS_KEY"))
 
-    return {"statusCode": 200, "body": json.dumps(body)}
+    return {"statusCode": 200, "body": json.dumps("Success")}
