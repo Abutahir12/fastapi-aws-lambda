@@ -15,7 +15,6 @@ jobs:
         python-version: 3.9
     - name: Install npm
       run: |
-        npm cache clean --force
         npm install --legacy-peer-deps    
     - name: Deploy dev env
       run: |
