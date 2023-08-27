@@ -7,6 +7,10 @@ jobs:
     name: dev-deploy
     runs-on: ubuntu-latest
     steps:
+    - name: List Root Folder Contents
+      run: |
+          # List the contents of the root folder
+          ls -R
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
