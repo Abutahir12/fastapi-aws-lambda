@@ -7,15 +7,20 @@ jobs:
     name: dev-deploy
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
     - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
-    - name: serverless deploy
-      uses: serverless/github-action@v3
-      with:
-        args: -c "cd ./flask-api-lambda && serverless deploy"
-        entrypoint: /bin/sh
+    - name: Install npm
+      run: |
+        npm cache clean --force
+        npm install --legacy-peer-deps    
+    - name: Deploy dev env
+      run: |
+        npm cache clean --force
+        npx serverless deploy --stage dev --region ap-south-1 --aws-s3-accelerate --verbose
 
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
