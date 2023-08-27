@@ -14,7 +14,7 @@ jobs:
     - name: serverless deploy
       uses: serverless/github-action@v3
       with:
-        args: -c "cd . && serverless deploy --region ap-south-1"
+        args: serverless deploy --region ap-south-1
         entrypoint: /bin/sh
 
       env:
