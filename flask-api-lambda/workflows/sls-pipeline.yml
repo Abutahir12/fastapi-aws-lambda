@@ -14,7 +14,7 @@ jobs:
     - name: serverless deploy
       uses: serverless/github-action@v3
       with:
-        args: -c "cd ./flask-api-lambda && serverless deploy"
+        args: -c "cd ../flask-api-lambda && serverless deploy"
         entrypoint: /bin/sh
 
       env:
