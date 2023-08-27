@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: use python
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+        uses: actions/setup-python@v2
       - name: serverless deploy
-      - uses: serverless/github-action@v3
+        uses: serverless/github-action@v3
         with:
           args: deploy --region ap-south-1
 
