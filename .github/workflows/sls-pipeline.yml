@@ -4,6 +4,9 @@ on:
       - main
 jobs:
   deploy:
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     name: dev-deploy
     runs-on: ubuntu-latest
     steps:
@@ -21,7 +24,5 @@ jobs:
         npm cache clean --force
         npx serverless deploy --stage dev --region ap-south-1 --aws-s3-accelerate --verbose
 
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
 
