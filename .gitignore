@@ -20,3 +20,4 @@ var/
 .serverless
 /__pycache__
 /%flaskapi-aws-lambda
+/%fastapi-aws-lambda

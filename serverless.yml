@@ -1,4 +1,4 @@
-service: flaskapi-aws-lambda
+service: fastpi-aws-lambda
 
 frameworkVersion: '3'
 
@@ -24,7 +24,7 @@ layers:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handler.handler
     layers:
       - !Ref FastApiLambdaLayer 
     url: true  
