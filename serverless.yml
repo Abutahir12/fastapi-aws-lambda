@@ -18,10 +18,14 @@ layers:
 
 package:
   individually: true
+  patterns:
+    - "!./*"
 
 functions:
   hello:
     handler: handler.hello
     layers:
         - { Ref: FastapiLambdaLayer }
+    patterns:
+      - "./*"    
 
