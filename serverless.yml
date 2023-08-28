@@ -27,5 +27,5 @@ functions:
   hello:
     handler: handler.hello
     layers:
-        - { Ref: FastApiLambdaLayer }
+      - !Ref FastApiLambdaLayer 
 
