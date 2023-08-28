@@ -1,7 +1,8 @@
 from pydantic import BaseModel
+from typing import Union
 
 class PostUserRequest(BaseModel):
     username: str
     email: str
-    designation: str | None = None
-    organization: str | None = None
+    designation: Union[str, None]  = None
+    organization:  Union[str, None]  = None
