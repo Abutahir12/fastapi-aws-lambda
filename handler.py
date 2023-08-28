@@ -10,4 +10,4 @@ handler = Mangum(app)
 
 @app.post("/user")
 def create_user(request: PostUserRequest):
-    return {"statusCode": 200, "message": "User created successfully", "item": json.dumps(request) }
+    return {"statusCode": 200, "message": "User created successfully", "item": request }
