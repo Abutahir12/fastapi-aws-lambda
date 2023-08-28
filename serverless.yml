@@ -7,6 +7,13 @@ provider:
   runtime: python3.9
   region: ap-south-1
 
+package:
+  individually: true
+  patterns:
+    - "!node_modules/**"
+    - "!requirements.txt"
+    - "!package.json"
+
 layers:
   fastApi:
     path: fastApi_layer
