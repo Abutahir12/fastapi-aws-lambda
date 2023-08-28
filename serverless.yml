@@ -20,7 +20,10 @@ layers:
     description: lambda layer for fastapi related dependencies
     compatibleRuntimes:
       - python3.9
-    retain: false  
+    retain: true 
+    package:
+        patterns:
+          - "!./*"
 
 functions:
   hello:
