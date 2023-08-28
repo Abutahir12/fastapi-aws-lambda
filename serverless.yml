@@ -8,7 +8,7 @@ provider:
   region: ap-south-1
 
 layers:
-  fastapi:
+  fastApi:
     path: fastApi_layer
     name: fastapi
     description: lambda layer for fastapi related dependencies
