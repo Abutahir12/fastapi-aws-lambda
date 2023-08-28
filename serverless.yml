@@ -27,4 +27,5 @@ functions:
     handler: handler.hello
     layers:
       - !Ref FastApiLambdaLayer 
+    url: true  
 
