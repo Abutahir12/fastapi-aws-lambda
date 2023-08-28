@@ -15,7 +15,7 @@ package:
 
 layers:
   fastApi:
-    path: fastApi
+    path: fastApi_layer
     name: fastApi
     description: lambda layer for fastapi related dependencies
     compatibleRuntimes:
