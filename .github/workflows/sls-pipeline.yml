@@ -22,6 +22,7 @@ jobs:
         npm install --legacy-peer-deps   
     - name: Create layers
       run: |
+        ls # Checking the files in current dir
         mkdir -p fastApi/python/ # creating new directory for layer.
         pip install --target ./fastApi/python/  fastapi
         pip install --target ./fastApi/python/  mangum     
