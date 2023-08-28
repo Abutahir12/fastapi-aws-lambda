@@ -16,16 +16,9 @@ layers:
       - python3.9
     retain: false  
 
-package:
-  individually: true
-  patterns:
-    - "!./*"
-
 functions:
   hello:
     handler: handler.hello
     layers:
-        - { Ref: FastapiLambdaLayer }
-    patterns:
-      - "./*"    
+        - { Ref: FastApiLambdaLayer }
 
