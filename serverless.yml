@@ -15,6 +15,9 @@ layers:
     compatibleRuntimes:
       - python3.9
     retain: false  
+    package:
+      patterns:
+        - /* 
 
 functions:
   hello:
