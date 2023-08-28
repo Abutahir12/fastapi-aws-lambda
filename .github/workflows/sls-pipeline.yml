@@ -16,8 +16,9 @@ jobs:
         python-version: 3.9
     - name: Create layers
       run: |
-        mkdir -p layer/python/ # creating new directory for layers.
-        pip install --target ./layer/python/ dependencies    
+        mkdir -p layer/python/ # creating new directory for layer.
+        pip install --target ./layer/python/  fastapi
+        pip install --target ./layer/python/  mangum
     - name: Install npm
       run: |
         npm cache clean --force

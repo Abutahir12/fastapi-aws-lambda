@@ -7,6 +7,17 @@ provider:
   runtime: python3.9
   region: ap-south-1
 
+layers:
+  fastapi:
+    path: fastApi_layer
+    name: fastapi
+    description: lambda layer for fastapi related dependencies
+    compatibleRuntimes:
+      - python3.9
+    retain: false  
+
 functions:
   hello:
     handler: handler.hello
+    layers:
+        - { Ref: FastapiLambdaLayer }
