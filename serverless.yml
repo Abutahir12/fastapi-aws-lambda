@@ -21,3 +21,6 @@ functions:
     handler: handler.hello
     layers:
         - { Ref: FastapiLambdaLayer }
+    package:
+      patterns:
+        - /* 
