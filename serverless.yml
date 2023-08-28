@@ -23,7 +23,7 @@ layers:
     retain: false
 
 functions:
-  hello:
+  users:
     handler: handler.handler
     layers:
       - !Ref FastApiLambdaLayer 
