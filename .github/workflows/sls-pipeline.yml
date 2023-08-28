@@ -14,8 +14,13 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
+    - name: Create layers
+      run: |
+        mkdir -p layer/python/ # creating new directory for layers.
+        pip install --target ./layer/python/ dependencies    
     - name: Install npm
       run: |
+        npm cache clean --force
         npm install --legacy-peer-deps    
     - name: Deploy dev env
       run: |
